@@ -3,7 +3,7 @@
 This repository is for the NamelessMC.com wiki.
 The wiki is under works and is incomplete.
 
-## Planning
+## Wiki Layout - Planning
 
 * NamelessMC - V2
   * About
