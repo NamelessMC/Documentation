@@ -1,5 +1,8 @@
 # Documentation
 
+This repository is for the NamelessMC.com wiki.
+The wiki is under works and is incomplete.
+
 ## Planning
 
 * NamelessMC - V2
