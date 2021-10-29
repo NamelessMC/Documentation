@@ -207,6 +207,9 @@ module.exports = {
             require('precss'),
             require('autoprefixer'),
             require('cssnano'),
+            ['vuepress-plugin-clean-urls', {
+                normalSuffix: '/'
+            }]
         ]
     },
 };
