@@ -65,7 +65,7 @@ NamelessMC translations are kindly provided by the community. Currently availabl
 If you would like to assist with the NamelessMC development by providing an updated translation, please feel free to fork the repository here on GitHub and create any pull requests. If you need help or want to discuss changes with fellow translators, visit the [NamelessMC Translators](https://discord.gg/7Dku3fE) discord server.
 
 #### Translation credits
-Translation credits can be found within CONTRIBUTORS.md
+Translation credits can be found within [CONTRIBUTORS.md](https://github.com/NamelessMC/Nameless/blob/v2/CONTRIBUTORS.md)
 
 ## Special Thanks
 - All NamelessMC [contributors](https://github.com/NamelessMC/Nameless/graphs/contributors).
