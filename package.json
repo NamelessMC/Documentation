@@ -2,6 +2,7 @@
   "dependencies": {
     "@vuepress/plugin-google-analytics": "^1.0.0-rc.1",
     "jquery": "^3.3.1",
+    "postcss": "^8.3.11",
     "slick-carousel": "^1.8.1",
     "vue-tabs-component": "^1.5.0",
     "vuepress": "^1.8.2",
