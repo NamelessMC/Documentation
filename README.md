@@ -1,41 +1,14 @@
-# Documentation
-
-This repository is for the NamelessMC.com wiki.
-The wiki is under works and is incomplete.
-
-## Wiki Layout - Planning
-
-* NamelessMC - V2
-  * About
-  * Features
-  * Community
-* Website
-  * Installation
-    * Webhost
-      * Getting started
-        * Host
-        * Requirements
-      * Download files
-          * Using Nameless-Installer
-          * Manually install
-      * Database Configuration
-    * Linux - LAMP/LEMP
-      * Getting started
-        * Host
-        * Requirements
-      * Installing LAMP
-      * Installing LEMP
-      * Download Files
-        * Using Nameless Installer
-        * Manually install
-    * Installation Process
-  * Configuration
-    * Email
-    
-
-* Plugin
-  * Installation
-  * Features
-  * Commands
-  * etc
-  
+---
+home: true
+heroImage: /doc_pterry.png
+actionText: Get Started →
+actionLink: /project/introduction
+features:
+- title: Security First
+  details: Security is a first-class citizen on this platform with bcrypt hashing, AES-256-CBC encryption, and HTTPS support out of the box.
+- title: Modern Tooling
+  details: Built on a modern stack utilizing the best design practices that make it easy to jump in and make modifications.
+- title: Docker to the Core
+  details: All servers run in isolated Docker containers that limit attack vectors, provide strict resource limits, and provide environments tailored to each specific game.
+footer: MIT Licensed | Copyright © 2015 - 2018 Dane Everitt & Contributors
+---
