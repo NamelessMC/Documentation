@@ -1,6 +1,6 @@
 module.exports = {
     base: '/',
-    title: 'Pterodactyl',
+    title: 'NamelessMC',
     description: 'Pterodactyl is an open-source game server management panel built with PHP 7, React, and Go. Designed with security in mind, Pterodactyl runs all game servers in isolated Docker containers while exposing a beautiful and intuitive UI to end users.',
     plugins: [
         ['@vuepress/search', {
@@ -44,11 +44,11 @@ module.exports = {
         nav: [
             {
                 text: 'Documentation',
-                link: '/project/introduction',
+                link: '/project/introduction.md',
             },
             {
                 text: 'Community Guides',
-                link: '/community/about',
+                link: '/community/about.md',
             },
             {
                 text: 'Get Help',
@@ -65,62 +65,62 @@ module.exports = {
                     title: 'Community Guides',
                     collapsable: false,
                     children: [
-                        '/community/about',
+                        '/community/about.md',
                     ]
                 },
                 {
                     title: 'Panel Installation',
                     collapsable: false,
                     children: [
-                        '/community/installation-guides/panel/centos7',
-                        '/community/installation-guides/panel/centos8',
-                        '/community/installation-guides/panel/debian9',
-                        '/community/installation-guides/panel/debian10',
-                        '/community/installation-guides/panel/ubuntu1804',
-                        '/community/installation-guides/panel/ubuntu2004',
+                        '/community/installation-guides/panel/centos7.md',
+                        '/community/installation-guides/panel/centos8.md',
+                        '/community/installation-guides/panel/debian9.md',
+                        '/community/installation-guides/panel/debian10.md',
+                        '/community/installation-guides/panel/ubuntu1804.md',
+                        '/community/installation-guides/panel/ubuntu2004.md',
                     ]
                 },
                 {
                     title: 'Wings Installation',
                     collapsable: false,
                     children: [
-                        '/community/installation-guides/wings/centos7',
-                        '/community/installation-guides/wings/centos8',
-                        '/community/installation-guides/wings/debian9',
-                        '/community/installation-guides/wings/debian10',
-                        '/community/installation-guides/wings/ubuntu1804',
-                        '/community/installation-guides/wings/ubuntu2004',
+                        '/community/installation-guides/wings/centos7.md',
+                        '/community/installation-guides/wings/centos8.md',
+                        '/community/installation-guides/wings/debian9.md',
+                        '/community/installation-guides/wings/debian10.md',
+                        '/community/installation-guides/wings/ubuntu1804.md',
+                        '/community/installation-guides/wings/ubuntu2004.md',
                     ]
                 },
                 {
                     title: 'Creating Eggs',
                     collapsable: false,
                     children: [
-                        '/community/config/eggs/creating_a_custom_egg',
-                        '/community/config/eggs/creating_a_custom_image',
+                        '/community/config/eggs/creating_a_custom_egg.md',
+                        '/community/config/eggs/creating_a_custom_image.md',
                     ],
                 },
                 {
                     title: 'Game Configuration',
                     collapsable: false,
                     children: [
-                        '/community/games/minecraft',
+                        '/community/games/minecraft.md',
                     ],
                 },
                 {
                     title: 'Tutorials',
                     collapsable: false,
                     children: [
-                        '/community/config/nodes/add_node',
-                        '/community/tutorials/artisan',
+                        '/community/config/nodes/add_node.md',
+                        '/community/tutorials/artisan.md',
                     ],
                 },
                 {
                     title: 'Customization',
                     collapsable: false,
                     children: [
-                        '/community/customization/panel',
-                        '/community/customization/wings',
+                        '/community/customization/panel.md',
+                        '/community/customization/wings.md',
                     ],
                 },
             ],
@@ -129,10 +129,10 @@ module.exports = {
                     title: 'Project Information',
                     collapsable: false,
                     children: [
-                        '/project/introduction',
-                        '/project/about',
-                        '/project/terms',
-                        '/project/community',
+                        '/project/introduction.md',
+                        '/project/about.md',
+                        '/project/terms.md',
+                        '/project/community.md',
                     ]
                 },
                 {
@@ -179,22 +179,22 @@ module.exports = {
                     title: 'Tutorials',
                     collapsable: false,
                     children: [
-                        '/tutorials/mysql_setup',
-                        '/tutorials/creating_ssl_certificates',
+                        '/tutorials/mysql_setup.md',
+                        '/tutorials/creating_ssl_certificates.md',
                     ],
                 },
                 {
                     title: 'Guides',
                     collapsable: false,
                     children: [
-                        '/guides/mounts',
+                        '/guides/mounts.md',
                     ],
                 },
                 {
                     title: 'Development & Ops',
                     collapsable: true,
                     children: [
-                        '/ops/publish_release',
+                        '/ops/publish_release.md',
                     ],
                 },
             ],
@@ -207,9 +207,6 @@ module.exports = {
             require('precss'),
             require('autoprefixer'),
             require('cssnano'),
-            ['vuepress-plugin-clean-urls', {
-                normalSuffix: '/'
-            }]
         ]
     },
 };
