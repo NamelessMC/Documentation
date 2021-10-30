@@ -1,7 +1,7 @@
 module.exports = {
     base: '/',
     title: 'NamelessMC',
-    description: 'Pterodactyl is an open-source game server management panel built with PHP 7, React, and Go. Designed with security in mind, Pterodactyl runs all game servers in isolated Docker containers while exposing a beautiful and intuitive UI to end users.',
+    description: 'NamelessMC is a free, easy to use & powerful website software for your Minecraft server, which includes a large range of features.',
     plugins: [
         ['@vuepress/search', {
             searchMaxSuggestions: 10
@@ -32,15 +32,15 @@ module.exports = {
         ['link', { rel: 'manifest', href: '/favicons/site.webmanifest' }],
         ['link', { rel: 'shortcut icon', href: '/favicons/favicon.ico' }],
         ['meta', { name: 'msapplication-config', content: '/favicons/browserconfig.xml' }],
-        ['meta', { name: 'theme-color', content: '#0e4688' }],
+        ['meta', { name: 'theme-color', content: '#c6a951' }],
     ],
     themeConfig: {
-        repo: 'pterodactyl/panel',
-        docsRepo: 'pterodactyl/documentation',
+        repo: 'namelessmc/nameless',
+        docsRepo: 'namelessmc/documentation',
         repoLabel: 'Contribute',
         editLinkText: 'Help us improve this page.',
         editLinks: true,
-        logo: '/logos/pterry.svg',
+        logo: '/logos/nameless.svg',
         nav: [
             {
                 text: 'Documentation',
@@ -51,16 +51,21 @@ module.exports = {
                 link: '/community/about.md',
             },
             {
-                text: 'Get Help',
-                link: 'https://discord.gg/pterodactyl'
-            },
-            {
-                text: 'API',
-                link: 'https://dashflo.net/docs/api/pterodactyl/v1/'
+                text: 'Discord',
+                link: 'https://discord.gg/nameless'
             }
         ],
         sidebar: {
             '/community/': [
+                {
+                    title: 'Community Guides',
+                    collapsable: false,
+                    children: [
+                        '/community/about.md',
+                    ]
+                },
+            ],
+            '/': [
                 {
                     title: 'Community Guides',
                     collapsable: false,
