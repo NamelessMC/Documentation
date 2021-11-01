@@ -1,6 +1,8 @@
-# NamelessMC - v2
+# NamelessMC - v2 pre-release 13
 ![NamelessMC Banner](https://i.imgur.com/gt8uezk.png)
 NamelessMC is a free, easy to use & powerful website software for your Minecraft server, which includes a large range of features.
+
+NamelessMC version 2.0.0 is still a pre-release, and is not yet recommended for production use. Keep up to date with development in our [Spigot thread](https://www.spigotmc.org/threads/nameless-minecraft-website-software.34810) and our [Discord server](https://discord.gg/nameless).
 
 The official project website, providing support and additional downloads such as modules and templates, can be found at [https://namelessmc.com/](https://namelessmc.com/).
 
@@ -65,7 +67,7 @@ NamelessMC translations are kindly provided by the community. Currently availabl
 If you would like to assist with the NamelessMC development by providing an updated translation, please feel free to fork the repository here on GitHub and create any pull requests. If you need help or want to discuss changes with fellow translators, visit the [NamelessMC Translators](https://discord.gg/7Dku3fE) discord server.
 
 #### Translation credits
-Translation credits can be found within [CONTRIBUTORS.md](https://github.com/NamelessMC/Nameless/blob/v2/CONTRIBUTORS.md)
+Translation credits can be found within [CONTRIBUTORS.md](/CONTRIBUTORS.md)
 
 ## Special Thanks
 - All NamelessMC [contributors](https://github.com/NamelessMC/Nameless/graphs/contributors).
