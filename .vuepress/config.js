@@ -125,7 +125,7 @@ module.exports = {
                     title: 'NamelessMC',
                     collapsable: false,
                     children: [
-                        '/main/README.md',
+                        '/main/main.md',
                     ]
                 },
                 {
