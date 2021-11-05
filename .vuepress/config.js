@@ -66,10 +66,21 @@ module.exports = {
                         'custom-colors'
                     ]
                 },
+                //{
+                //    title: 'Patreon',
+                //    path: 'patreon'
+                //}
+                // {
+                //     title: 'Patreon',
+                //     path: '/guides/patreon',
+                //     children: [
+                //         {title: 'Patreon Red', path: '/guides/patreon#patreon-red'}
+                //     ]
+                // }
             ],
             '/': [
                 {
-                    title: 'NamelessMC',
+                    title: 'WidgetBot',
                     path: '/'
                 },
                 {
@@ -77,9 +88,9 @@ module.exports = {
                     path: '/tutorial/',
                     collapsable: false,
                     children: [
-                        {title: 'Crate', path: '/embed/crate/tutorial'},
-                        {title: 'html-embed', path: '/embed/html-embed/tutorial'},
-                        {title: 'iframes', path: '/tutorial/iframes'}
+                        { title: 'Crate', path: '/embed/crate/tutorial' },
+                        { title: 'html-embed', path: '/embed/html-embed/tutorial' },
+                        { title: 'iframes', path: '/tutorial/iframes' }
                     ]
                 },
                 {
@@ -92,11 +103,11 @@ module.exports = {
                             path: '/embed/crate/',
                             collapsable: false,
                             children: [
-                                {title: 'Intro', path: '/embed/crate/'},
-                                {title: 'Tutorial', path: 'embed/crate/tutorial'},
-                                {title: 'Options', path: 'embed/crate/options'},
-                                {title: 'API', path: 'embed/crate/api'},
-                                {title: 'Examples', path: 'embed/crate/examples'}
+                                { title: 'Intro', path: '/embed/crate/' },
+                                { title: 'Tutorial', path: 'embed/crate/tutorial' },
+                                { title: 'Options', path: 'embed/crate/options' },
+                                { title: 'API', path: 'embed/crate/api' },
+                                { title: 'Examples', path: 'embed/crate/examples' }
                             ]
                         },
                         {
@@ -104,10 +115,10 @@ module.exports = {
                             path: '/embed/html-embed/',
                             collapsable: false,
                             children: [
-                                {title: 'Intro', path: '/embed/html-embed/'},
-                                {title: 'Tutorial', path: 'embed/html-embed/tutorial'},
-                                {title: 'Attributes', path: 'embed/html-embed/attributes'},
-                                {title: 'API', path: 'embed/html-embed/api'}
+                                { title: 'Intro', path: '/embed/html-embed/' },
+                                { title: 'Tutorial', path: 'embed/html-embed/tutorial' },
+                                { title: 'Attributes', path: 'embed/html-embed/attributes' },
+                                { title: 'API', path: 'embed/html-embed/api' }
                             ]
                         },
                         {
@@ -115,8 +126,8 @@ module.exports = {
                             path: '/embed/react-embed/',
                             collapsable: false,
                             children: [
-                                {title: 'Intro', path: '/embed/react-embed/'},
-                                {title: 'Props', path: 'embed/react-embed/props'}
+                                { title: 'Intro', path: '/embed/react-embed/' },
+                                { title: 'Props', path: 'embed/react-embed/props' }
                             ]
                         }
                     ]
@@ -131,6 +142,11 @@ module.exports = {
                 }
             ]
         },
+        searchPlaceholder: 'Search',
+        nextLinks: true,
+        prevLinks: true,
+        smoothScroll: true
+    },
     postcss: {
         plugins: [
             require('postcss-import'),
