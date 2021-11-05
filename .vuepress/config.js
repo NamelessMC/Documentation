@@ -122,8 +122,11 @@ module.exports = {
             ],
             '/': [
                 {
-                    title: 'WidgetBot',
-                    path: '/'
+                    title: 'NamelessMC',
+                    collapsable: false,
+                    children: [
+                        '/README.md',
+                    ]
                 },
                 {
                     title: 'Panel',
