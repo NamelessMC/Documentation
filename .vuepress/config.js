@@ -56,27 +56,69 @@ module.exports = {
             }
         ],
         sidebar: {
-            '/guides/': [
+            '/community/': [
                 {
-                    title: 'Helpful Guides',
-                    path: '',
+                    title: 'Community Guides',
                     collapsable: false,
                     children: [
-                        'automod',
-                        'custom-colors'
+                        '/community/about.md',
                     ]
                 },
-                //{
-                //    title: 'Patreon',
-                //    path: 'patreon'
-                //}
-                // {
-                //     title: 'Patreon',
-                //     path: '/guides/patreon',
-                //     children: [
-                //         {title: 'Patreon Red', path: '/guides/patreon#patreon-red'}
-                //     ]
-                // }
+                {
+                    title: 'Panel Installation',
+                    collapsable: false,
+                    children: [
+                        '/community/installation-guides/panel/centos7.md',
+                        '/community/installation-guides/panel/centos8.md',
+                        '/community/installation-guides/panel/debian9.md',
+                        '/community/installation-guides/panel/debian10.md',
+                        '/community/installation-guides/panel/ubuntu1804.md',
+                        '/community/installation-guides/panel/ubuntu2004.md',
+                    ]
+                },
+                {
+                    title: 'Wings Installation',
+                    collapsable: false,
+                    children: [
+                        '/community/installation-guides/wings/centos7.md',
+                        '/community/installation-guides/wings/centos8.md',
+                        '/community/installation-guides/wings/debian9.md',
+                        '/community/installation-guides/wings/debian10.md',
+                        '/community/installation-guides/wings/ubuntu1804.md',
+                        '/community/installation-guides/wings/ubuntu2004.md',
+                    ]
+                },
+                {
+                    title: 'Creating Eggs',
+                    collapsable: false,
+                    children: [
+                        '/community/config/eggs/creating_a_custom_egg.md',
+                        '/community/config/eggs/creating_a_custom_image.md',
+                    ],
+                },
+                {
+                    title: 'Game Configuration',
+                    collapsable: false,
+                    children: [
+                        '/community/games/minecraft.md',
+                    ],
+                },
+                {
+                    title: 'Tutorials',
+                    collapsable: false,
+                    children: [
+                        '/community/config/nodes/add_node.md',
+                        '/community/tutorials/artisan.md',
+                    ],
+                },
+                {
+                    title: 'Customization',
+                    collapsable: false,
+                    children: [
+                        '/community/customization/panel.md',
+                        '/community/customization/wings.md',
+                    ],
+                },
             ],
             '/': [
                 {
@@ -84,68 +126,69 @@ module.exports = {
                     path: '/'
                 },
                 {
-                    title: 'Tutorial',
-                    path: '/tutorial/',
+                    title: 'Panel',
                     collapsable: false,
-                    children: [
-                        { title: 'Crate', path: '/embed/crate/tutorial' },
-                        { title: 'html-embed', path: '/embed/html-embed/tutorial' },
-                        { title: 'iframes', path: '/tutorial/iframes' }
-                    ]
-                },
-                {
-                    title: 'Embed',
-                    path: '/embed/',
-                    collapsable: false,
-                    children: [
+                    path: '/panel/',
+                    currentVersion: '1.0',
+                    versions: [
                         {
-                            title: 'Crate',
-                            path: '/embed/crate/',
-                            collapsable: false,
+                            title: '1.6',
+                            name: '1.0',
+                            status: 'stable',
                             children: [
-                                { title: 'Intro', path: '/embed/crate/' },
-                                { title: 'Tutorial', path: 'embed/crate/tutorial' },
-                                { title: 'Options', path: 'embed/crate/options' },
-                                { title: 'API', path: 'embed/crate/api' },
-                                { title: 'Examples', path: 'embed/crate/examples' }
-                            ]
-                        },
-                        {
-                            title: 'html-embed',
-                            path: '/embed/html-embed/',
-                            collapsable: false,
-                            children: [
-                                { title: 'Intro', path: '/embed/html-embed/' },
-                                { title: 'Tutorial', path: 'embed/html-embed/tutorial' },
-                                { title: 'Attributes', path: 'embed/html-embed/attributes' },
-                                { title: 'API', path: 'embed/html-embed/api' }
-                            ]
-                        },
-                        {
-                            title: 'react-embed',
-                            path: '/embed/react-embed/',
-                            collapsable: false,
-                            children: [
-                                { title: 'Intro', path: '/embed/react-embed/' },
-                                { title: 'Props', path: 'embed/react-embed/props' }
+                                '/getting_started',
+                                '/webserver_configuration',
+                                '/additional_configuration',
+                                '/updating',
+                                '/troubleshooting',
+                                '/legacy_upgrade',
                             ]
                         }
                     ]
                 },
                 {
-                    title: 'Bot',
-                    path: '',
+                    title: 'Wings',
+                    collapsable: false,
+                    path: '/wings/',
+                    currentVersion: '1.0',
+                    versions: [
+                        {
+                            title: '1.5',
+                            name: '1.0',
+                            status: 'stable',
+                            children: [
+                                '/installing',
+                                '/upgrading',
+                                '/migrating',
+                                '/configuration',
+                            ]
+                        }
+                    ]
+                },
+                {
+                    title: 'Tutorials',
                     collapsable: false,
                     children: [
-                        '/bot/moderation'
-                    ]
-                }
-            ]
+                        '/tutorials/mysql_setup.md',
+                        '/tutorials/creating_ssl_certificates.md',
+                    ],
+                },
+                {
+                    title: 'Guides',
+                    collapsable: false,
+                    children: [
+                        '/guides/mounts.md',
+                    ],
+                },
+                {
+                    title: 'Development & Ops',
+                    collapsable: true,
+                    children: [
+                        '/ops/publish_release.md',
+                    ],
+                },
+            ],
         },
-        searchPlaceholder: 'Search',
-        nextLinks: true,
-        prevLinks: true,
-        smoothScroll: true
     },
     postcss: {
         plugins: [
