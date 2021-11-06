@@ -92,11 +92,11 @@ module.exports = {
                             name: '2.0',
                             status: 'current',
                             children: [
-                                '/installation',
-                                '/webserver',
-                                '/database',
-                                '/ssl',
-                                '/smtp'
+                                '/installation.md',
+                                '/webserver.md',
+                                '/database.md',
+                                '/ssl.md',
+                                '/smtp.md'
                             ]
                         },
                     ]
