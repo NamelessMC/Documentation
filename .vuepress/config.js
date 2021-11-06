@@ -68,7 +68,9 @@ module.exports = {
                     title: 'Setup',
                     collapsable: false,
                     children: [
-                        '/setup/installation.md'
+                        '/setup/installation.md',
+                        '/setup/webserver.md',
+                        '/setup/database.md'
                     ]
                 },
             ],
