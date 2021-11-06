@@ -60,8 +60,24 @@ module.exports = {
                 {
                     title: 'NamelessMC',
                     collapsable: false,
-                    children: [
-                        '/main/about.md'
+                    currentVersion: '2.0',
+                    versions: [
+                        {
+                            title: 'v2-pr13',
+                            name: '2.0',
+                            status: 'beta',
+                            children: [
+                                '/about.md'
+                            ]
+                        },
+                        {
+                            title: 'v1.0.21',
+                            name: '1.0',
+                            status: 'stable',
+                            children: [
+                                '/about.md'
+                            ]
+                        },
                     ]
                 },
                 {
