@@ -90,7 +90,7 @@ module.exports = {
                         {
                             title: 'v2-pr13',
                             name: '2.0',
-                            status: 'stable',
+                            status: 'current',
                             children: [
                                 '/installation',
                                 '/webserver',
