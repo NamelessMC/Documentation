@@ -50,6 +50,6 @@ For Minecraft integration, you can install the Nameless Plugin in your Spigot se
 NamelessMC translations are kindly provided by the community. Currently available translations can be found [here](https://github.com/NamelessMC/Nameless/tree/v2/custom/languages) and [here](https://translate.namelessmc.com). Please note, not all translations may be up to date.
 
 ## Special Thanks
-* All [NamelessMC Translation contributors](https://github.com/NamelessMC/Nameless/CONTRIBUTORS.md)
+* All [NamelessMC Translation contributors](https://github.com/NamelessMC/Nameless/CONTRIBUTORS.md).
 * All [NamelessMC contributors](https://github.com/NamelessMC/Nameless/graphs/contributors).
 * [JetBrains](https://www.jetbrains.com/), whose products are used to develop the NamelessMC project.

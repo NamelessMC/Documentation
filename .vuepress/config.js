@@ -71,7 +71,16 @@ module.exports = {
                         '/setup/installation.md',
                         '/setup/webserver.md',
                         '/setup/database.md',
-                        '/setup/ssl.md'
+                        '/setup/ssl.md',
+                        '/setup/smtp.md'
+                    ]
+                },
+                {
+                    title: 'Troubleshooting',
+                    collapsable: false,
+                    children: [
+                        '/troubleshooting/faq.md',
+                        '/troubleshooting/plugin.md'
                     ]
                 },
             ],
