@@ -1,3 +1,4 @@
+# Plugin errors
 ## Malformed json
 Errors:
 * `MalformedJsonException`
