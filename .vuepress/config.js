@@ -45,6 +45,14 @@ module.exports = {
             {
                 text: 'Discord',
                 link: 'https://discord.gg/nameless'
+            },
+            {
+                text: 'Website',
+                link: 'https://namelessmc.com/'
+            },
+            {
+                text: 'Spigot thread',
+                link: 'https://www.spigotmc.org/threads/nameless-minecraft-website-software.34810'
             }
         ],
         sidebar: {
@@ -54,6 +62,7 @@ module.exports = {
                     collapsable: false,
                     children: [
                         '/main/main.md',
+                        '/main/features.md'
                     ]
                 },
                 {
