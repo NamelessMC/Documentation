@@ -35,12 +35,7 @@ apt update
 apt-add-repository universe
 
 # Install Dependencies
-
-# PHP 7.4 (recommended)
 apt -y install php7.4 php7.4-{curl,exif,gd,mbstring,mysql,pdo,xml} mariadb-server nginx tar git
-
-# PHP 8.0
-apt -y install php8.0 php8.0-{curl,exif,gd,mbstring,mysql,pdo,xml} mariadb-server nginx tar git
 ```
 
 ### Installation
