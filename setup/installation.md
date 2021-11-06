@@ -84,15 +84,10 @@ GRANT ALL PRIVILEGES ON nameless.* TO 'nameless'@'127.0.0.1' WITH GRANT OPTION;
 ## Video Tutorials
 Here's some video tutorials on installing NamelessMC
 
-**v1**
+* [English | v1.0.15 only](https://www.youtube.com/watch?v=aTcZ8MbBixs)
 
-* https://www.youtube.com/watch?v=aTcZ8MbBixs (v1.0.15 only, english)
+* [English | v2-pr6 / v2-pr7](https://www.youtube.com/watch?v=vWQM48a1qQ4)
 
+* [English | v2-pr7](https://www.youtube.com/watch?v=Lu2Bt9AKujo)
 
-**v2**
-
-* https://www.youtube.com/watch?v=vWQM48a1qQ4 (v2-pre6 / v2-pre7, english)
-
-* https://www.youtube.com/watch?v=Lu2Bt9AKujo (v2-pre7 in depth, english)
-
-* https://www.youtube.com/watch?v=UlJTeYFHzA8 (v2-pre7, spanish)
+* [Spanish | v2-pr7](https://www.youtube.com/watch?v=UlJTeYFHzA8)
