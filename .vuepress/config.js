@@ -84,12 +84,21 @@ module.exports = {
                 {
                     title: 'Setup',
                     collapsable: false,
-                    children: [
-                        '/setup/installation.md',
-                        '/setup/webserver.md',
-                        '/setup/database.md',
-                        '/setup/ssl.md',
-                        '/setup/smtp.md'
+                    path: "/setup/",
+                    currentVersion: '2.0',
+                    versions: [
+                        {
+                            title: 'v2-pr13',
+                            name: '2.0',
+                            status: 'stable',
+                            children: [
+                                '/installation',
+                                '/webserver',
+                                '/database',
+                                '/ssl',
+                                '/smtp'
+                            ]
+                        },
                     ]
                 },
                 {
