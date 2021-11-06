@@ -8,6 +8,6 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f git@github.com:pterodactyl/documentation.git master:gh-pages
+git push -f git@github.com:namekessmc/Documentation.git master:gh-pages
 
 cd -
