@@ -70,7 +70,8 @@ module.exports = {
                     children: [
                         '/setup/installation.md',
                         '/setup/webserver.md',
-                        '/setup/database.md'
+                        '/setup/database.md',
+                        '/setup/ssl.md'
                     ]
                 },
             ],
