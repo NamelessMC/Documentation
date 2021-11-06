@@ -18,7 +18,7 @@ PHP 8 works for the most part but still has some issues, please stick with PHP 7
 :::
 
 ## Installing
-Here we will be covering installing NamelessMC on Ubuntu
+Here we will be covering installing NamelessMC on [Ubuntu](https://ubuntu.com)
 ### Installing dependencies
 ```bash
 # Add "add-apt-repository" command
