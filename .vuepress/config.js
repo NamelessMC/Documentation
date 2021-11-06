@@ -61,7 +61,7 @@ module.exports = {
                     title: 'NamelessMC',
                     collapsable: false,
                     children: [
-                        '/main/main.md',
+                        '/main/about.md',
                         '/main/features.md'
                     ]
                 },
