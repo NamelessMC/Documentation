@@ -67,7 +67,7 @@ module.exports = {
                             name: '2.0',
                             status: 'beta',
                             children: [
-                                '/about.md'
+                                '/main/2.0/about.md'
                             ]
                         },
                         {
@@ -75,7 +75,7 @@ module.exports = {
                             name: '1.0',
                             status: 'stable',
                             children: [
-                                '/about.md'
+                                '/main/1.0/about.md'
                             ]
                         },
                     ]
