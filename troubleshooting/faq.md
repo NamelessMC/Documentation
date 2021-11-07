@@ -9,7 +9,8 @@ If you have installed NamelessMC with our installation, this shouldn't happen
 :::
 
 ### Solution 1
-Your webserver is not configured to allow the .htaccess file.
+Your webserver is not configured to allow the .htaccess file. Ensure a file named `.htaccess` exists in your web server's root directory containing [these rules](https://raw.githubusercontent.com/NamelessMC/Nameless/v2/.htaccess).
+
 
 ```bash
 chmod -R 755 /var/www/html/.htaccess
@@ -34,8 +35,6 @@ Usually this occurs if you are running Apache on Ubuntu/Debian, in which case th
 - Save and exit the file
 - Type `sudo a2enmod rewrite` to enable Apache's rewrite module
 - Type `sudo service apache2 restart` to restart Apache
-
-Finally, ensure a file named `.htaccess` exists in your web server's root directory containing [these rules](https://raw.githubusercontent.com/NamelessMC/Nameless/v2/.htaccess).
 
 #### Using Nginx webserver
 
@@ -71,15 +70,11 @@ This is usually caused by the `cache` folder within the web root (and its subdir
 
 An _example_ command for Apache and nginx on Ubuntu is
 
-```
+```sh
 sudo chown -R www-data:www-data /var/www/html/cache
 ```
 
 ## My core/config.php is not writable!
-
-::: tip Note
-If you have installed NamelessMC with our installation, this shouldn't happen
-:::
 
 **Error:** Your core/config.php is not writable. Please check your file permissions.
 
@@ -108,7 +103,7 @@ If you want to upgrade from v1, follow the instructions below. You will not be a
 3. Upload all the v2 files from the Github using the links provided below.
 4. Run through the installer and make sure you select that this is an upgrade from v1 when installing.
 
-Latest Pre-Release (v2 - pre13) - Click [here](https://github.com/NamelessMC/Nameless/releases/tag/v2.0.0-pr13)!
+Latest Pre-Release (v2 - pr13) - Click [here](https://github.com/NamelessMC/Nameless/releases/tag/v2.0.0-pr13)!
 
 Latest Development Code (Use at your own risk!) - Click [here](https://github.com/NamelessMC/Nameless/archive/v2.zip)!
 
