@@ -44,7 +44,7 @@ module.exports = {
         nav: [
             {
                 text: 'Plugin',
-                link: '/plugin/2.0/info'
+                link: '/plugin/2.0/info/about.md'
             },
             {
                 text: 'Discord',
