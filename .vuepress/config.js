@@ -48,7 +48,7 @@ module.exports = {
             },
             {
                 text: 'Plugin',
-                link: '/plugin/2.0/info/about.md'
+                link: '/plugin/test.md'
             },
             {
                 text: 'Discord',
