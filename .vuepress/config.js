@@ -139,6 +139,7 @@ module.exports = {
                     title: 'Plugin',
                     collapsable: false,
                     children: [
+                        '/plugin/test.md',
                         '/plugin/2.0/info/about.md',
                         '/plugin/2.0/info/installation.md'
                     ]
