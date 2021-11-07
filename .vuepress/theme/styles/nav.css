@@ -1,5 +1,5 @@
 .nav {
-    @apply .fixed .w-full .bg-blue .font-sans .border-b .border-t .border-blue-darker .px-2 .text-sm .z-50 .flex;
+    @apply .fixed .w-full .bg-orange .font-sans .border-b .border-t .border-orange-darker .px-2 .text-sm .z-50 .flex;
     height: 56px;
     line-height: 54px;
 
@@ -85,7 +85,7 @@
                     @apply .p-2 .block;
 
                     &:hover {
-                        @apply .rounded .bg-grey-lighter .no-underline .text-blue-dark;
+                        @apply .rounded .bg-grey-lighter .no-underline .text-orange-dark;
 
                         & > .header {
                             @apply .text-grey-dark;
