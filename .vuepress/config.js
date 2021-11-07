@@ -116,30 +116,37 @@ module.exports = {
             ],
             '/plugin/': [
                 {
-                    title: 'Info',
-                    collapsable: false,
-                    path: "/info/",
-                    currentVersion: '2.0',
-                    versions: [
-                        {
-                            title: 'v2-pr13',
-                            name: '2.0',
-                            status: 'current',
-                            children: [
-                                '/about.md',
-                                '/installation.md',
-                                '/errors.md'
-                            ]
-                        },
-                    ]
-                },
-                {
-                    title: 'Troubleshooting',
+                    //                    title: 'Info',
+                    //                    collapsable: false,
+                    //                    path: "/info/",
+                    //                    currentVersion: '2.0',
+                    //                    versions: [
+                    //                        {
+                    //                            title: 'v2-pr13',
+                    //                            name: '2.0',
+                    //                            status: 'current',
+                    //                            children: [
+                    //                                '/about.md',
+                    //                                '/installation.md',
+                    //                                '/errors.md'
+                    //                            ]
+                    //                       },
+                    //                    ]
+                    title: 'Community Guides',
                     collapsable: false,
                     children: [
-                        '/troubleshooting/plugin.md'
+                        '/plugin/2.0/info/about.md',
+                        '/plugin/2.0/info/installation.md',
+                        '/plugin/2.0/info/errors.md'
                     ]
                 },
+                //                {
+                //                    title: 'Troubleshooting',
+                //                    collapsable: false,
+                //                    children: [
+                //                        '/troubleshooting/plugin.md'
+                //                    ]
+                //                },
             ],
         },
     },
