@@ -1,4 +1,4 @@
-# Getting Started
+# Installation on a vps
 
 [[toc]]
 ## Dependencies
@@ -17,7 +17,7 @@
 PHP 8 works for the most part but still has some issues, please stick with PHP 7.4 for now.
 :::
 
-## Installing
+## Installation
 Here we will be covering installing NamelessMC on [Ubuntu](https://ubuntu.com)
 ### Installing dependencies
 ```bash
@@ -46,6 +46,7 @@ mkdir -p /var/www/html
 cd /var/www/html
 ```
 
+#### Manual install (recommended)
 Once you have created a new directory for the website and moved into it you'll need to download the NamelessMC files. This
 is as simple as using `curl` to download our pre-packaged content. Once it is downloaded you'll need to unpack the archive
 and then set the correct permissions.
@@ -53,6 +54,7 @@ and then set the correct permissions.
 ```bash
 curl -Lo nameless.tar.gz https://github.com/NamelessMC/Nameless/archive/refs/tags/v2.0.0-pr13.tar.gz
 tar -xzvf nameless.tar.gz
+cd Nameless-2.0.0-pr13 && mv * ../ && cd ../
 chmod -R 755 *
 ```
 
@@ -74,15 +76,32 @@ GRANT ALL PRIVILEGES ON nameless.* TO 'nameless'@'127.0.0.1' WITH GRANT OPTION;
 
 :::
 
+#### Script install
+Once you have created a new directory for the website and moved into it you'll need to download the NamelessMC files. This
+is as simple as using `curl` to download our pre-packaged content. Once it is downloaded you'll need to unpack the archive
+and then set the correct permissions.
 
+```bash
+curl -Lo nameless.tar.gz https://github.com/NamelessMC/Nameless-Installer/archive/refs/tags/1.0.4.tar.gz
+tar -xzvf nameless.tar.gz
+cd Nameless-Installer-1.0.4 && mv easy-install.php ../ && cd ../
+chmod -R 755 easy-install.php
+```
 
-## Video Tutorials
-Here's some video tutorials on installing NamelessMC
+Now that all of the files have been downloaded we need to configure the database.
 
-* [English | v1.0.15 only](https://www.youtube.com/watch?v=aTcZ8MbBixs)
+::: tip Database Configuration
+You will need a database setup and a user with the correct permissions created for that database before
+continuing any further. See below to create a user and database for your website quickly. To find more detailed information
+please have a look at [Setting up MySQL](/setup/database.html).
 
-* [English | v2-pr6 / v2-pr7](https://www.youtube.com/watch?v=vWQM48a1qQ4)
+```sql
+mysql -u root -p
 
-* [English | v2-pr7](https://www.youtube.com/watch?v=Lu2Bt9AKujo)
+# Remember to change 'yourPassword' below to be a unique password
+CREATE USER 'nameless'@'127.0.0.1' IDENTIFIED BY 'yourPassword';
+CREATE DATABASE nameless;
+GRANT ALL PRIVILEGES ON nameless.* TO 'nameless'@'127.0.0.1' WITH GRANT OPTION;
+```
 
-* [Spanish | v2-pr7](https://www.youtube.com/watch?v=UlJTeYFHzA8)
+:::

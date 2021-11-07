@@ -36,7 +36,7 @@ certbot certonly --standalone -d example.com
 ```
 
 ### Troubleshooting
-If you get an `Insecure Connection` or related error when trying to access your panel, it is likely that the SSL certificate has expired.
+If you get an `Insecure Connection` or related error when trying to access your website, it is likely that the SSL certificate has expired.
 This can be easily fixed by renewing the SSL certificate, although using the command `certbot renew` won't do the job. As it'll give a error like: `Error: Attempting to renew cert (domain) from /etc/letsencrypt/renew/domain.conf produced an unexpected error`.
 This will happen especially if you're running NGINX instead of Apache. The solution for this is to stop NGINX, then renew the certificate, finally restart NGINX.
 

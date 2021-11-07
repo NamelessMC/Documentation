@@ -35,13 +35,17 @@ module.exports = {
         ['meta', { name: 'theme-color', content: '#c6a951' }],
     ],
     themeConfig: {
-        repo: 'namelessmc/nameless',
-        docsRepo: 'namelessmc/documentation',
+        repo: 'NamelessMC/Nameless',
+        docsRepo: 'NamelessMC/Documentation',
         repoLabel: 'Contribute',
         editLinkText: 'Help us improve this page.',
         editLinks: true,
         logo: '/logos/nameless.svg',
         nav: [
+            {
+                text: 'Plugin',
+                link: '/plugin/'
+            },
             {
                 text: 'Discord',
                 link: 'https://discord.gg/nameless'
@@ -92,7 +96,8 @@ module.exports = {
                             name: '2.0',
                             status: 'current',
                             children: [
-                                '/installation.md',
+                                '/installation_vps.md',
+                                '/installation_webhost.md',
                                 '/webserver.md',
                                 '/database.md',
                                 '/ssl.md',
@@ -105,7 +110,33 @@ module.exports = {
                     title: 'Troubleshooting',
                     collapsable: false,
                     children: [
-                        '/troubleshooting/faq.md',
+                        '/troubleshooting/faq.md'
+                    ]
+                },
+            ],
+            '/plugin/': [
+                {
+                    title: 'Info',
+                    collapsable: false,
+                    path: "/info/",
+                    currentVersion: '2.0',
+                    versions: [
+                        {
+                            title: 'v2-pr13',
+                            name: '2.0',
+                            status: 'current',
+                            children: [
+                                '/about.md',
+                                '/installation.md',
+                                '/errors.md'
+                            ]
+                        },
+                    ]
+                },
+                {
+                    title: 'Troubleshooting',
+                    collapsable: false,
+                    children: [
                         '/troubleshooting/plugin.md'
                     ]
                 },
