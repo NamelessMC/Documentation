@@ -3,7 +3,7 @@ body {
 }
 
 a {
-    @apply .text-blue-light .no-underline;
+    @apply .text-orange-light .no-underline;
     font-weight: 500;
     &:hover {
         @apply .underline;

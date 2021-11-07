@@ -46,13 +46,13 @@ $arrow-bg: #000;
             @apply .pl-8;
 
             &:hover {
-                @apply .no-underline .text-blue-light;
+                @apply .no-underline .text-orange-light;
             }
         }
     }
 
     .sidebar-heading {
-        @apply .text-blue .text-lg .font-bold .px-6 .mt-0 .mb-2 .cursor-pointer;
+        @apply .text-orange .text-lg .font-bold .px-6 .mt-0 .mb-2 .cursor-pointer;
         transition: color 200ms ease;
 
         &.open, &:hover {
@@ -159,11 +159,11 @@ $arrow-bg: #000;
         @apply .inline-block .w-full .border-l-4 .border-transparent .text-grey-darkest .px-6 .py-1 .font-normal;
 
         &:hover {
-            @apply .text-blue;
+            @apply .text-orange;
         }
 
         &.active {
-            @apply .border-blue .font-bold .text-blue;
+            @apply .border-orange .font-bold .text-orange;
         }
     }
 }
