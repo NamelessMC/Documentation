@@ -1,5 +1,5 @@
 body {
-    @apply .text-grey-light .font-sans;
+    @apply .text-grey-darkest .font-sans;
 }
 
 a {
@@ -55,7 +55,7 @@ a.header-anchor {
 }
 
 blockquote {
-    @apply .border-l-4 .border-grey-light .text-grey-light .p-1 .pl-4 .font-light .my-4 .text-xl;
+    @apply .border-l-4 .border-grey-light .text-grey .p-1 .pl-4 .font-light .my-4 .text-xl;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -105,7 +105,7 @@ table {
         @apply .border-t;
 
         &:nth-child(2n) {
-            @apply .bg-grey-light;
+            @apply .bg-grey-lightest;
         }
     }
 
