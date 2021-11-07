@@ -27,7 +27,7 @@
         transition: all 100ms linear;
 
         &:hover {
-            @apply .text-blue .bg-white .no-underline;
+            @apply .text-blue .bg-dark .no-underline;
         }
     }
 
@@ -35,7 +35,7 @@
         @apply .p-4 .my-4 .inline-block .w-full;
 
         span {
-            @apply .block .rounded-full .bg-white .text-blue .text-center .w-24 .h-24 .mx-auto .py-6;
+            @apply .block .rounded-full .bg-dark .text-blue .text-center .w-24 .h-24 .mx-auto .py-6;
 
             i {
                 @apply .text-5xl;
