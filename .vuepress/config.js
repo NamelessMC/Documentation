@@ -43,6 +43,10 @@ module.exports = {
         logo: '/logos/nameless.svg',
         nav: [
             {
+                text: 'Website',
+                link: '/main/2.0/about.md'
+            },
+            {
                 text: 'Plugin',
                 link: '/plugin/2.0/info/about.md'
             },
@@ -132,11 +136,17 @@ module.exports = {
                     //                            ]
                     //                       },
                     //                    ]
-                    title: 'Community Guides',
+                    title: 'Plugin',
                     collapsable: false,
                     children: [
                         '/plugin/2.0/info/about.md',
-                        '/plugin/2.0/info/installation.md',
+                        '/plugin/2.0/info/installation.md'
+                    ]
+                },
+                {
+                    title: 'amogus guides',
+                    collapsable: false,
+                    children: [
                         '/plugin/2.0/info/errors.md'
                     ]
                 },
