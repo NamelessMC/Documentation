@@ -23,7 +23,7 @@ The following list is a brief summary of the features available in v2 pre-releas
     * Display PlaceholderAPI placeholders on website user profiles or in leaderboards
 * 🗨️ Discord integration
   * Webhook: receive updates for new members, forum posts, resources, etc.
-  * [Nameless-Link Discord bot](https://github.com/NamelessMC/Nameless-Link/wiki/Setup)
+  * [Nameless-Link Discord bot](/link/2.0/setup.md)
     * Link Discord accounts with NamelessMC accounts
     * Synchronize Discord roles with NamelessMC groups (bidirectional)
 * ⚙️ [API](https://github.com/NamelessMC/Nameless/wiki/v2-API) - Write your own integrations or use one of ours (see above)
@@ -44,7 +44,7 @@ Support can be found in one of the following places:
 Feature requests and bugs can be posted on the [GitHub Issues](https://github.com/NamelessMC/Nameless/issues) tab.
 
 ## Plugin
-For Minecraft integration, you can install the Nameless Plugin in your Spigot server. Currently the plugin is only available for spigot, but we're working on bringing it to different server software, such as Sponge and BungeeCord. You can find a list of features and installation instructions in the [plugin readme](/plugin/2.0/about.md).
+For Minecraft integration, you can install the Nameless Plugin in your Spigot server. Currently the plugin is only available for spigot, but we're working on bringing it to different server software, such as Sponge and BungeeCord. You can find a list of features and installation instructions in the [plugin readme](/plugin/2.0/about.md)
 
 ## Translations
 NamelessMC translations are kindly provided by the community. Currently available translations can be found [here](https://github.com/NamelessMC/Nameless/tree/v2/custom/languages) and [here](https://translate.namelessmc.com). Please note, not all translations may be up to date.
