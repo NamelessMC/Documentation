@@ -85,7 +85,8 @@ module.exports = {
                                 '/versioning.md',
                                 '/updates.md',
                                 '/installation.md',
-                                '/variables.md'
+                                '/variables.md',
+                                '/official-data.md'
                             ]
                         },
                     ]

@@ -14,7 +14,7 @@ You are required to have the "Manage Roles" permission in the guild in order to 
 3. You can now enable Discord integration in `Panel > Integrations > Discord`.
 
 ::: tip
-By using the invite link above you use our Nameless-Link bot instance. This means we store your website API key, see [this page](https://github.com/NamelessMC/Nameless-Link/wiki/Official-instance-data-storage) for more information. If you know a thing or two about systems administration you might want to [host the bot yourself](/link/2.0/install.html).
+By using the invite link above you use our Nameless-Link bot instance. This means we store your website API key, see [this page](/link/2.0/official-data.html) for more information. If you know a thing or two about systems administration you might want to [host the bot yourself](/link/2.0/install.html).
 :::
 
 ## Link NamelessMC and Discord accounts

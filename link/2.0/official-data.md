@@ -1,3 +1,4 @@
+# About the official bot
 ### What do we store?
 Your discord server id, website api url and a timestamp when it was last used.
 
