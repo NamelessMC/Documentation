@@ -24,9 +24,8 @@ PHP 8 works for the most part but still has some issues, please stick with PHP 7
 ### Script install
 1. You need to install the script from [here](https://github.com/NamelessMC/Nameless-Installer/releases).
 2. Unzip it.
-3. Rename it from `easy-install.php` to `index.php`.
-4. Upload it to the server, with SFTP or with a Web File Manager.
-5. Visit your website and continue the installation.
+4. Upload `easy-install.php` to the server, with SFTP or with a Web File Manager.
+5. Visit your website (`example.com/easy-install.php`) and continue the installation.
 
 ## Video Tutorials
 Here's some video tutorials on installing NamelessMC

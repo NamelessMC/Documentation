@@ -10,7 +10,10 @@ This plugin does not support BungeeCord! Install it on every spigot server where
 3. Enter the API URL.
 4. `/nlpl reload`
 
+
+::: tip Check
 Check if basic commands are working (e.g. `/info`). If they do, move on.
+:::
 
 1. For every server with this plugin installed, create a Minecaft server in StaffCP if you haven't done so already.
 2. Copy the server's ID.

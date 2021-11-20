@@ -48,7 +48,7 @@ module.exports = {
             },
             {
                 text: 'Plugin',
-                link: '/plugin/test.md'
+                link: '/plugin/2.0/about.md'
             },
             {
                 text: 'Discord',
@@ -64,6 +64,26 @@ module.exports = {
             }
         ],
         sidebar: {
+            '/plugin/': [
+                {
+                    title: 'Info',
+                    collapsable: false,
+                    path: "/plugin/",
+                    currentVersion: '2.0',
+                    versions: [
+                        {
+                            title: 'v2-pr13',
+                            name: '2.0',
+                            status: 'current',
+                            children: [
+                                '/about.md',
+                                '/installation.md',
+                                '/errors.md'
+                            ]
+                        },
+                    ]
+                }
+            ],
             '/': [
                 {
                     title: 'NamelessMC',
@@ -117,48 +137,7 @@ module.exports = {
                         '/troubleshooting/faq.md'
                     ]
                 },
-            ],
-            '/plugin/': [
-                {
-                    //                    title: 'Info',
-                    //                    collapsable: false,
-                    //                    path: "/info/",
-                    //                    currentVersion: '2.0',
-                    //                    versions: [
-                    //                        {
-                    //                            title: 'v2-pr13',
-                    //                            name: '2.0',
-                    //                            status: 'current',
-                    //                            children: [
-                    //                                '/about.md',
-                    //                                '/installation.md',
-                    //                                '/errors.md'
-                    //                            ]
-                    //                       },
-                    //                    ]
-                    title: 'Plugin',
-                    collapsable: false,
-                    children: [
-                        '/plugin/test.md',
-                        '/plugin/2.0/info/about.md',
-                        '/plugin/2.0/info/installation.md'
-                    ]
-                },
-                {
-                    title: 'amogus guides',
-                    collapsable: false,
-                    children: [
-                        '/plugin/2.0/info/errors.md'
-                    ]
-                },
-                //                {
-                //                    title: 'Troubleshooting',
-                //                    collapsable: false,
-                //                    children: [
-                //                        '/troubleshooting/plugin.md'
-                //                    ]
-                //                },
-            ],
+            ]
         },
     },
     postcss: {
