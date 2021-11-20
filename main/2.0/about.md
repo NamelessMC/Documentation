@@ -44,7 +44,7 @@ Support can be found in one of the following places:
 Feature requests and bugs can be posted on the [GitHub Issues](https://github.com/NamelessMC/Nameless/issues) tab.
 
 ## Plugin
-For Minecraft integration, you can install the Nameless Plugin in your Spigot server. Currently the plugin is only available for spigot, but we're working on bringing it to different server software, such as Sponge and BungeeCord. You can find a list of features and installation instructions in the [plugin readme](https://github.com/NamelessMC/Nameless-Plugin/blob/master/README.md).
+For Minecraft integration, you can install the Nameless Plugin in your Spigot server. Currently the plugin is only available for spigot, but we're working on bringing it to different server software, such as Sponge and BungeeCord. You can find a list of features and installation instructions in the [plugin readme](/plugin/2.0/about.md).
 
 ## Translations
 NamelessMC translations are kindly provided by the community. Currently available translations can be found [here](https://github.com/NamelessMC/Nameless/tree/v2/custom/languages) and [here](https://translate.namelessmc.com). Please note, not all translations may be up to date.
