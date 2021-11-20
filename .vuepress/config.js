@@ -51,6 +51,10 @@ module.exports = {
                 link: '/plugin/2.0/about.md'
             },
             {
+                text: 'Link Bot',
+                link: '/link/2.0/setup.md'
+            },
+            {
                 text: 'Discord',
                 link: 'https://discord.gg/nameless'
             },
@@ -64,6 +68,29 @@ module.exports = {
             }
         ],
         sidebar: {
+            '/link/': [
+                {
+                    title: 'Link Bot',
+                    collapsable: false,
+                    path: "/link/",
+                    currentVersion: '2.0',
+                    versions: [
+                        {
+                            title: 'v2',
+                            name: '2.0',
+                            status: 'current',
+                            children: [
+                                '/setup.md',
+                                '/language.md',
+                                '/versioning.md',
+                                '/updates.md',
+                                '/installation.md',
+                                '/variables.md'
+                            ]
+                        },
+                    ]
+                }
+            ],
             '/plugin/': [
                 {
                     title: 'Info',
