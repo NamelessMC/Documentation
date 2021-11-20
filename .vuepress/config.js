@@ -72,7 +72,7 @@ module.exports = {
                     currentVersion: '2.0',
                     versions: [
                         {
-                            title: 'v2-pr13',
+                            title: 'v2',
                             name: '2.0',
                             status: 'current',
                             children: [
@@ -92,7 +92,7 @@ module.exports = {
                     currentVersion: '2.0',
                     versions: [
                         {
-                            title: 'v2-pr13',
+                            title: 'v2',
                             name: '2.0',
                             status: 'beta',
                             children: [
@@ -116,7 +116,7 @@ module.exports = {
                     currentVersion: '2.0',
                     versions: [
                         {
-                            title: 'v2-pr13',
+                            title: 'v2',
                             name: '2.0',
                             status: 'current',
                             children: [
@@ -135,6 +135,25 @@ module.exports = {
                     collapsable: false,
                     children: [
                         '/troubleshooting/faq.md'
+                    ]
+                },
+                {
+                    title: 'Development',
+                    collapsable: false,
+                    path: "/development/",
+                    currentVersion: '2.0',
+                    versions: [
+                        {
+                            title: 'v2',
+                            name: '2.0',
+                            status: 'current',
+                            children: [
+                                '/modules.md',
+                                '/templates.md',
+                                '/api.md',
+                                '/upgrade.md'
+                            ]
+                        },
                     ]
                 },
             ]

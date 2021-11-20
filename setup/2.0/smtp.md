@@ -35,3 +35,8 @@ The fields below this option need filling out depending on whether you wish to u
 * The host is the hostname of your SMTP server, such as your SMTP server's IP address
 
 There are additional fields within `core/email.php`, including the encryption, however these require manual configuration.
+
+## Enable debugging
+Rename `core/classes/Email.php` (NOT `core/email.php`) to something else (like `Email.php.original`). Create a new `Email.php` file with [these contents](https://gist.githubusercontent.com/samerton/a26df55561f9735eb2f69af6868f57fb/raw/39600339f889e35546daa8a7f9b89788cfa73261/Email.php).
+
+To revert, delete `Email.php` and rename `Email.php.original` back to `Email.php`.

@@ -6,4 +6,4 @@ This is a NamelessMC Wiki where you can find everything you need for
 * Troubleshooting
 
 ## Special thanks
-Thanks for the wiki from [Pterodactyl Documentation](https://github.com/pterodactyl/documentation)
+Thanks for the text and wiki from [Pterodactyl Documentation](https://github.com/pterodactyl/documentation)
