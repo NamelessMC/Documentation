@@ -56,6 +56,7 @@ curl -Lo nameless.tar.gz https://github.com/NamelessMC/Nameless/archive/refs/tag
 tar -xzvf nameless.tar.gz
 cd Nameless-2.0.0-pr13 && mv * ../ && cd ../
 chmod -R 755 *
+chown -R www-data:www-data *
 ```
 
 Now that all of the files have been downloaded we need to configure the database.
