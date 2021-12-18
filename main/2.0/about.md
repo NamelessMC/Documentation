@@ -23,10 +23,10 @@ The following list is a brief summary of the features available in v2 pre-releas
     * Display PlaceholderAPI placeholders on website user profiles or in leaderboards
 * 🗨️ Discord integration
   * Webhook: receive updates for new members, forum posts, resources, etc.
-  * [Nameless-Link Discord bot](/link/2.0/setup.md)
+  * [Nameless-Link Discord bot](/link/2.0/setup.html)
     * Link Discord accounts with NamelessMC accounts
     * Synchronize Discord roles with NamelessMC groups (bidirectional)
-* ⚙️ [API](https://github.com/NamelessMC/Nameless/wiki/v2-API) - Write your own integrations or use one of ours (see above)
+* ⚙️ [API](/development/2.0/api.html) - Write your own integrations or use one of ours (see above)
 * 🧩 New powerful module system allowing for further NamelessMC integration.
 * ✏️ New template and language systems, allowing for total customisation.
 * ✨ Pretty URL option (requires mod_rewrite or special nginx config).
@@ -44,10 +44,20 @@ Support can be found in one of the following places:
 Feature requests and bugs can be posted on the [GitHub Issues](https://github.com/NamelessMC/Nameless/issues) tab.
 
 ## Plugin
-For Minecraft integration, you can install the Nameless Plugin in your Spigot server. Currently the plugin is only available for spigot, but we're working on bringing it to different server software, such as Sponge and BungeeCord. You can find a list of features and installation instructions in the [plugin readme](/plugin/2.0/about.md)
+For Minecraft integration, you can install the Nameless Plugin in your Spigot server. Currently the plugin is only available for spigot, but we're working on bringing it to different server software, such as Sponge and BungeeCord. You can find a list of features and installation instructions in the [plugin readme](https://docs.namelessmc.com/plugin/2.0/about.md).
+
+## Contributing
+We welcome all contributions of code and translations. Please feel free to fork the repository on GitHub and create any pull requests.
+- We generally keep a todo list in the Milestones tab of the the Issues page.
+- We use Composer to manage dependencies. Before you can install the dependencies, you need to install Composer on your local computer. Installation instructions are [here](https://getcomposer.org/doc/00-intro.md).
+- To install the Composer packages we depend on, run the following command in the root directory of the NamelessMC repository:
+    ```
+    composer install --dev
+    ```
+  - This could take up to about a minute depending on your internet connection.
 
 ## Translations
-NamelessMC translations are kindly provided by the community. Currently available translations can be found [here](https://github.com/NamelessMC/Nameless/tree/v2/custom/languages) and [here](https://translate.namelessmc.com). Please note, not all translations may be up to date.
+If you would like to assist with the NamelessMC development by providing an updated translation, please feel free to fork the repository here on GitHub and create any pull requests. Or, if you don't want to deal with creating a pull request, please send us a zip file and we'll add it to the repository for you. Just make sure you translate the [latest development version](https://github.com/NamelessMC/Nameless/archive/refs/heads/v2.zip), not the latest release or we won't be able to merge your translations! Currently other available translations can be found [here](https://translate.namelessmc.com). Please note, not all translations may be up to date. To discuss changes with fellow translators, visit the [NamelessMC Translators](https://discord.gg/7Dku3fE) discord server.
 
 ## Special Thanks
 * All [NamelessMC Translation contributors](https://github.com/NamelessMC/Nameless/CONTRIBUTORS.md).
