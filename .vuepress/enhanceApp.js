@@ -2,7 +2,7 @@ function findVersionedPaths(paths) {
   return Object.entries(paths).map(([path, children]) => {
     return children
       .filter(child => Array.isArray(child.versions))
-      .map(child => ({ ...child, path: pathJoin(path, child.path) }))
+      .map(child => ({ ...child, path: pathJoin(path, child.path) }));
   }).flat();
 }
 
