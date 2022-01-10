@@ -37,7 +37,7 @@ module.exports = {
     themeConfig: {
         repo: 'NamelessMC/Nameless',
         docsRepo: 'NamelessMC/Documentation',
-        repoLabel: 'Contribute',
+        repoLabel: 'GitHub',
         editLinkText: 'Help us improve this page.',
         editLinks: true,
         logo: '/logos/nameless.svg',

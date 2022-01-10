@@ -1,15 +1,17 @@
 # Webserver Configuration
 
-::: danger
-You should remove the default Apache or NGINX configuration as it will expose application secrets to malicious users by default.
-:::
 ::: warning
 When using the SSL configuration you MUST create SSL certificates, otherwise your webserver will fail to start. See the [Creating SSL Certificates](/setup/ssl.html) documentation page to learn how to create these certificates before continuing.
 :::
 
 :::: tabs
 ::: tab "Nginx With SSL"
-You should paste the contents of the file below, replacing `<domain>` with your domain name being used in a file called
+First, remove the default NGINX configuration.
+``` bash
+rm /etc/nginx/sites-enabled/default
+```
+
+Now you should paste the contents of the file below, replacing `<domain>` with your domain name being used in a file called
 `nameless.conf` and place it in `/etc/nginx/sites-available/`, or &mdash; if on CentOS, `/etc/nginx/conf.d/`.
 
 <<< @/.snippets/webservers/nginx-php7.4.conf{5,11,26-27}
@@ -28,7 +30,12 @@ systemctl restart nginx
 
 :::
 ::: tab "Nginx Without SSL"
-You should paste the contents of the file below, replacing `<domain>` with your domain name being used in a file called
+First, remove the default NGINX configuration.
+``` bash
+rm /etc/nginx/sites-enabled/default
+```
+
+Now you should paste the contents of the file below, replacing `<domain>` with your domain name being used in a file called
 `nameless.conf` and place it in `/etc/nginx/sites-available/`, or &mdash; if on CentOS, `/etc/nginx/conf.d/`.
 
 <<< @/.snippets/webservers/nginx-php7.4-nossl.conf{3}
@@ -46,8 +53,12 @@ systemctl restart nginx
 
 :::
 ::: tab "Apache With SSL"
-You should paste the contents of the file below, replacing `<domain>` with your domain name being used in a file called
-`nameless.conf` and place it in `/etc/apache2/sites-available`, or &mdash; if on CentOS, `/etc/httpd/conf.d/`.
+First, remove the default Apache configuration.
+``` bash
+a2dissite 000-default.conf
+```
+
+Now you should paste the contents of the file below, replacing `<domain>` with your domain name being used in a file called`nameless.conf` and place it in `/etc/apache2/sites-available`, or &mdash; if on CentOS, `/etc/httpd/conf.d/`.
 
 Note: When using Apache, make sure you have the `libapache2-mod-php` package installed or else PHP will not display on your webserver.
 
@@ -66,8 +77,12 @@ systemctl restart apache2
 
 :::
 ::: tab "Apache Without SSL"
-You should paste the contents of the file below, replacing `<domain>` with your domain name being used in a file called
-`nameless.conf` and place it in `/etc/apache2/sites-available`, or &mdash; if on CentOS, `/etc/httpd/conf.d/`.
+First, remove the default Apache configuration.
+``` bash
+a2dissite 000-default.conf
+```
+
+Now you should paste the contents of the file below, replacing `<domain>` with your domain name being used in a file called`nameless.conf` and place it in `/etc/apache2/sites-available`, or &mdash; if on CentOS, `/etc/httpd/conf.d/`.
 
 Note: When using Apache, make sure you have the `libapache2-mod-php` package installed or else PHP will not display on your webserver.
 

@@ -35,7 +35,7 @@ apt update
 apt-add-repository universe
 
 # Install Dependencies
-apt -y install php7.4 php7.4-{curl,exif,gd,mbstring,mysql,pdo,xml} mariadb-server nginx tar git
+apt -y install php7.4 php7.4-{curl,exif,gd,mbstring,mysql,pdo,xml} mariadb-server nginx tar git composer
 ```
 
 ### Installation
@@ -55,6 +55,7 @@ and then set the correct permissions.
 curl -Lo nameless.tar.gz https://github.com/NamelessMC/Nameless/archive/refs/tags/v2.0.0-pr13.tar.gz
 tar -xzvf nameless.tar.gz
 cd Nameless-2.0.0-pr13 && mv * ../ && cd ../
+composer install
 chmod -R 755 *
 chown -R www-data:www-data *
 ```
@@ -73,6 +74,7 @@ mysql -u root -p
 CREATE USER 'nameless'@'127.0.0.1' IDENTIFIED BY 'yourPassword';
 CREATE DATABASE nameless;
 GRANT ALL PRIVILEGES ON nameless.* TO 'nameless'@'127.0.0.1' WITH GRANT OPTION;
+exit
 ```
 
 :::
@@ -103,6 +105,7 @@ mysql -u root -p
 CREATE USER 'nameless'@'127.0.0.1' IDENTIFIED BY 'yourPassword';
 CREATE DATABASE nameless;
 GRANT ALL PRIVILEGES ON nameless.* TO 'nameless'@'127.0.0.1' WITH GRANT OPTION;
+exit
 ```
 
 :::
