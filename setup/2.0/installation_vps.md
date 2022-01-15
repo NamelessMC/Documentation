@@ -65,7 +65,7 @@ Now that all of the files have been downloaded we need to configure the database
 ::: tip Database Configuration
 You will need a database setup and a user with the correct permissions created for that database before
 continuing any further. See below to create a user and database for your website quickly. To find more detailed information
-please have a look at [Setting up MySQL](/setup/database.html).
+please have a look at [Setting up MySQL](/setup/2.0/database.html).
 
 ```sql
 mysql -u root -p
@@ -96,7 +96,7 @@ Now that all of the files have been downloaded we need to configure the database
 ::: tip Database Configuration
 You will need a database setup and a user with the correct permissions created for that database before
 continuing any further. See below to create a user and database for your website quickly. To find more detailed information
-please have a look at [Setting up MySQL](/setup/database.html).
+please have a look at [Setting up MySQL](/setup/2.0/database.html).
 
 ```sql
 mysql -u root -p

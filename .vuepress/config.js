@@ -15,6 +15,9 @@ module.exports = {
         ['vuepress-plugin-container', {
             type: 'danger',
         }],
+        ['vuepress-plugin-clean-urls', {
+            normalSuffix: '/'
+        }],
         ['tabs'],
     ],
     configureWebpack: {
@@ -194,6 +197,7 @@ module.exports = {
             require('precss'),
             require('autoprefixer'),
             require('cssnano'),
+            require('vuepress-plugin-clean-urls'),
         ]
     },
 };
