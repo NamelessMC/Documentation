@@ -52,9 +52,9 @@ is as simple as using `curl` to download our pre-packaged content. Once it is do
 and then set the correct permissions.
 
 ```bash
-curl -Lo nameless.tar.gz https://github.com/NamelessMC/Nameless/archive/refs/tags/v2.0.0-pr13.tar.gz
+curl -Lo nameless.tar.gz https://github.com/NamelessMC/Nameless/archive/refs/tags/v2.0.0-pr12.tar.gz
 tar -xzvf nameless.tar.gz
-cd Nameless-2.0.0-pr13 && mv * ../ && cd ../
+mv Nameless-2.0.0-pr12/* Nameless-2.0.0-pr12/.htaccess .
 composer install
 chmod -R 755 *
 chown -R www-data:www-data *
@@ -87,7 +87,7 @@ and then set the correct permissions.
 ```bash
 curl -Lo nameless.tar.gz https://github.com/NamelessMC/Nameless-Installer/archive/refs/tags/1.0.4.tar.gz
 tar -xzvf nameless.tar.gz
-cd Nameless-Installer-1.0.4 && mv easy-install.php ../ && cd ../
+mv Nameless-Installer-1.0.4/easy-install.php .
 chmod -R 755 easy-install.php
 ```
 
