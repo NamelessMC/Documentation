@@ -1,22 +1,19 @@
 # Api
-
 ## Using the API
-In order to use the API, the API key must be verified. This is done by passing the API key within the URL, as follows:
+- In order to use the API, the API key must be verified. This is done by passing the API key as a header named `X-API-KEY`.
 
-`example_site.com/api/v2/API_KEY/action`
+- Base URL: `example_site.com/api/v2/`
 
-where `API_KEY` is the API key used, and `action` is the specified action.
+- All UUIDs returned by the API are without dashes. The API accepts UUIDs both with and without dashes as parameters.
 
-All UUIDs returned by the API are without dashes. The API accepts UUIDs both with and without dashes as parameters.
+- This documentation is for the latest NamelessMC version only.
 
-This documentation is for pr12 only.
-* pr7: Go [here](https://github.com/NamelessMC/Nameless/wiki/v2-API/8af96b241e0c6a8767c98bc8d190d1847b3ae725)
-* pr8-pr12: Please upgrade to pr12. The API has several issues in these versions and lacks documentation.
+- The API will also return whether there was an error or not, with the `error` field (either true or false). If `true`, there will also be a `message` field containing the error message and sometimes a `meta` field (should be a string but due to a bug sometimes other types) containing more information about the error.
 
-The API will also return whether there was an error or not, with the `error` field (either true or false). If `true`, there will also be a `message` field containing the error message and sometimes a `meta` field (should be a string but due to a bug sometimes other types) containing more information about the error.
+- `{user}` in a URL means a valid NamelessMC user ID.
 
 ## Actions
-### `info` GET
+### `/info` GET
 Returns general information about this NamelessMC instance. No parameters required. Response:
 * `namelessmc_version` - string: NamelessMC version, e.g. `2.0.0-pr8`
 * `version_update` - object (may not be present if no update is availabe)
@@ -42,12 +39,13 @@ Example
 }
 ```
 
-### `getAnnouncements` GET
-Returns all announcements in json. No parameters required. You can optionally add an `id` GET parameter so that only announcements the user should see will be returned
+### `/users/{user}/announcements` GET
+Returns all announcements the specified user can see.
 ```json
 {
-  "announcements" : {
-    1: {
+  "announcements" : [
+    {
+      "id": 1,
     	"header": "Announcement!",
       "message" : "This is an example announcement",
       "pages" : ["Home", "Forums"],
@@ -59,7 +57,8 @@ Returns all announcements in json. No parameters required. You can optionally ad
         4
       ]
     },
-    2: {
+    {
+      "id": 2,
       "header": "Staff meeting reminder",
       "message" : "Hello staff, please attend the staff meeting on December 25th at 17:00 UTC.",
       "pages" : ["Home"],
@@ -68,13 +67,13 @@ Returns all announcements in json. No parameters required. You can optionally ad
         4
       ]
     }
-  },
+  ],
   "error": false
 }
 ```
 
-### `register` POST
-The `register` action will register a specified user. POST body is a JSON object with
+### `/users/register` POST
+The `users/register` action will register a specified user. POST body is a JSON object with
 * `username` - Forum username
 * `uuid` - Minecraft UUID (optional. If Minecraft integration is enabled, the website should get the UUID)
 * `email` -  the email address of the user (must be unique)
@@ -101,12 +100,8 @@ The register method response, if email verification is **enabled**, is as follow
 }
 ```
 
-### `userInfo` GET
-The `userInfo` action will retrieve information about a specified user. Possible GET parameters (choose one):
-* `id` - NamelessMC id
-* `username` - NamelessMC username
-* `uuid` - Minecraft UUID (only if Minecraft integration is enabled)
-* `discord_id` - Discord user ID
+### `/users/{user}` GET
+The `users/{user}` action will retrieve information about a specified user.
 
 The output is a JSON object
 
@@ -131,8 +126,8 @@ The output is a JSON object
     * `ingame_rank_name` - (what happens if it's linked to multiple?)
     * `discord_role_id` - (what happens if it's linked to multiple?)
 
-### `groupInfo` GET
-* `id` NamelessMC ID of group 
+### `/groups` GET
+* `id` NamelessMC ID of group.
 * `name` NamelessMC name of group. 
 Specify multiple times to include multiple groups. When not specified, all groups are listed.
 
@@ -177,16 +172,16 @@ Always ordered by `order`, ascending
 }
 ```
 
-### `addGroups` POST
+### `/users/{user}/groups/add` POST
 - `user` - the NamelessMC ID of the user
 - `groups` - json array of website group IDs to add to this user
 
-### `removeGroups` POST
+### `/users/{user}/groups/remove` POST
 - `user` - the NamelessMC ID of the user
 - `groups` - json array of website group IDs to remove from this user
 
-### `createReport` POST
-The `createReport` action will create a report about a given user. The required POST body is a JSON object with the following keys:
+### `/reports/create` POST
+The `reports/create` action will create a report about a given user. The required POST body is a JSON object with the following keys:
 - `reporter` - NamelessMC user ID of the user creating the report
 - `content` - the reason for the report's creation (max 255 characters)
 - `reported` - NamelessMC user ID of the user being reported (optional)
@@ -202,8 +197,8 @@ Errors:
 26 - `reporter` == `reported`
 23 - unable to create report
 
-### `getNotifications` GET
-The `getNotifications` action will return a list of alerts a user has. Specify the Nameless ID using the `id` GET parameter.
+### `/users/{user}/notifications` GET
+The `users/{user}/notifications` action will return a list of alerts a user has.
 
 The method will return error 16 if the user does not exist on the website, otherwise it will return a JSON array with notifications:
 
@@ -238,8 +233,8 @@ Available types:
 }
 ```
 
-### `serverInfo` POST
-The `serverInfo` action is used by the Minecraft plugin to send server information to the website.
+### `/minecraft/server-info` POST
+The `minecraft/server-info` action is used by the Minecraft plugin to send server information to the website.
 
 The post body is a JSON object:
 ```json
@@ -292,17 +287,18 @@ Only the `server-id` field is required, all others are optional. Specifying `nam
 
 Keep in mind that the requests by the plugin, while they are sent every 10 seconds by default, may be sent more or less frequently.
 
-### `updateUsername` POST
-The `updateUsername` action will update the website username of a user with a given NamelessMC ID. The required JSON object is as follows:
-- `user` - NamelessMC id
+### `/users/{user}/update-username` POST
+The `users/{user}/update-username` action will update the website username of a user with a given NamelessMC ID.
 - `username` - new username for user
 
-### `verifyMinecraft` POST
-- `user` - NamelessMC ID
+### `/users/{user}/ban` POST
+
+### `/minecraft/verify` POST
+- `user` - NamelessMC user ID
 - `code` - code to validate user with
 
-### `listUsers` GET
-The `listUsers` action provides a list of registered users. No parameters required. Example response:
+### `/users` GET
+The `users` action provides a list of registered users. No parameters required. Example response:
 ```json
 {
     "users": [
@@ -328,6 +324,7 @@ The `listUsers` action provides a list of registered users. No parameters requir
 ```
 
 `uuid` may be left out if Minecraft integration is disabled. 
+`discord_id` will be left out if the Discord integration module is disabled. 
 Possible filter parameters:
 * `banned` (boolean)
 * `verified` (boolean)
@@ -335,10 +332,10 @@ Possible filter parameters:
 * `group_id` (integer)
 * `operator` (`'AND'` (default) or `'OR'`) - Whether all filters must apply (AND) or at least one (OR) 
 
-### `submitDiscordRoleList` POST
+### `/discord/submit-role-list` POST
 Post body is json object with a key "roles" and value is another json array of objects. Each object has an `id` and `name` key for the discord role ID and name, respectively.
 
-### `updateDiscordBotSettings` POST
+### `/discord/update-bot-settings` POST
 Updates discord bot settings. Not all parameters below have to be present, it is possible to only change one setting by specifying one parameter.
 - `url` - New Discord bot URL
 - `guild_id` - New Discord server ID to be associated with your website (as a string)
@@ -348,7 +345,7 @@ Updates discord bot settings. Not all parameters below have to be present, it is
 errors:
 * 31 if not at least one setting is specified
 
-### `verifyDiscord` POST
+### `/discord/verify` POST
 Link a discord account with the website. Post body is verification token in plain text.
 - `token` - Discord verification token
 - `discord_id` - Discord ID (AS A STRING)
@@ -356,36 +353,19 @@ Link a discord account with the website. Post body is verification token in plai
 
 Error codes?
 
-### `updateDiscordUsernames` POST
+### `/discord/update-usernames` POST
 - `users` array of json objects:
     - `id` discord user id
     - `name` discord username
 
 Error codes?
 
-### `getDiscordRoles` GET
-GET param `user` (NamelessMC ID). Response `roles` json array of role ids
-
-Error codes?
-
-### `setDiscordRoles` POST
+### `/discord/set-roles` POST
 POST body JSON object:
 - `user` - NamelessMC id
 - `roles` - Json array of discord role ids
 
 Error codes?
-
-### `addDiscordRoles` POST
-- `user` - NamelessMC id
-- `roles` - discord role ids
-
-
-### `removeDiscordRoles` POST
-- `user` - NamelessMC id
-- `roles` - discord role id. Website will not return an error if the user never had this role.
-
-### `banUser` POST
-- `user` - NamelessMC user id of user to ban
 
 ## Error Codes
 Whenever an error is returned, `code` and `message` fields will be returned, sometimes a `meta` (should be a string but due to a bug sometimes other types) field will be added which contains more detailed error information. The message can be in a variety of languages, depending on the active translation on the website, so the code corresponds to a certain type of error. The error codes and their meaning are listed below.
@@ -459,6 +439,10 @@ Whenever an error is returned, `code` and `message` fields will be returned, som
 `33` - Unable to set Discord Guild ID
 
 `34` - Discord integration is disabled
+
+`35` - `execute` method does not exist on the Endpoint
+
+`36` - Request not authorised
 
 ## Future Additions
 ### `createTopic` POST

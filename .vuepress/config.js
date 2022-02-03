@@ -153,6 +153,7 @@ module.exports = {
                                 '/webserver.md',
                                 '/database.md',
                                 '/ssl.md',
+                                '/oauth.md',
                                 '/smtp.md'
                             ]
                         },

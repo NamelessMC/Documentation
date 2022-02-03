@@ -1,6 +1,6 @@
 # Upgrade guide
 
-## Breaking changes
+## Breaking changes:
 
 ### PHP 7.4 requirement
 - Previously NamelessMC had a requirement of PHP 5.6.
@@ -53,7 +53,22 @@
 - Renamed for clairity.
 - Please use the `DB->selectQuery()` method.
 
-## API additions
+### API route changes
+- Please see the API docs for the new routes to use in your applications.
+
+### `Email::send()` method changes
+The new usage is as follows:
+- array of "email" and "name" strings to determine the recipient
+- string email subject
+- string email message
+- optional array of "email" and "name" strings to define a reply-to address
+
+### `Timeago` class renamed
+- Update your code to use the `TimeAgo` class with its corrected capitalization.
+
+
+---
+## API additions:
 
 ### `Instancable` class
 - Used to easily make a class a singleton.
@@ -68,3 +83,32 @@
 ### `Util::isModuleEnabled()` method
 - To more easily check if a module is enabled, you can call the `Util::isModuleEnabled(string $name)` method.
 
+### `HttpClient` class
+- Used for making `GET` or `POST` requests rather than using cURL manually.
+- Basic usage:
+	```php
+  $client = HttpClient::get($url); // or HttpClient::post($url, $data)
+  
+  if ($client->hasError()) {
+  		die($client->getError();
+  }
+  
+  $status = $client->status(); // 200, 404, 500, etc
+  
+  $data = $client->data();
+  ```
+ 
+### `Endpoints::registerTransformer(string $type, Closure $transformer)`
+- With the addition of API route binding, you can create custom transformers to use in your Endpoints.
+- Example:
+	- `"user"` transformer for finding a user by the given ID in the request URL
+  	- Used whenever `{user}` appears in an API endpoint URL
+    - The User object is loaded for the given user (if it exists), and passed to the Endpoint's `execute(Nameless2API $api, ...);` method!
+- Get creative, this can be used for anything =)
+	- `"post"` -> get a specific post
+  - `"report"` -> get a specific report
+  - etc
+  
+### `Email::addPlaceholder()` method
+- Allows modules to add placeholders to email messages.
+- Best practice would be to surround the variable with `[SquareBrackets]`.

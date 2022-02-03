@@ -51,8 +51,8 @@ chmod -R 777 /tmp/mysql.sock
 
 ## Where can I download the NamelessMC plugin?
 
-* v1 for Spigot and Bungeecord: https://www.spigotmc.org/resources/official-namelessplugin.42698/
-* v2 for Spigot only: https://www.spigotmc.org/resources/nameless-plugin-for-v2.59032/
+* [v1 for Spigot and Bungeecord](https://www.spigotmc.org/resources/official-namelessplugin.42698/)
+* [v2 for Spigot only](https://www.spigotmc.org/resources/nameless-plugin-for-v2.59032/)
 
 ## NamelessMC won't send emails to users
 
