@@ -9,6 +9,7 @@ The fields below this option need filling out depending on whether you wish to u
 * The password is your Gmail account password
 * The name field is your site name, or whatever name you want to be displayed in the "From" field in the email
 * The host is `smtp.gmail.com`
+* The port is `587`
 * Enable the Less secure through this link. https://myaccount.google.com/lesssecureapps?pli=1
 * (Not always required) Allow access via the captcha https://accounts.google.com/b/0/DisplayUnlockCaptcha
 
